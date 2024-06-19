@@ -4,7 +4,7 @@ import "./globals.css";
 
 const oswald = Oswald({
   subsets: ["latin"],
-  weight: "500",
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-oswald",
 });
 const poppins = Poppins({
