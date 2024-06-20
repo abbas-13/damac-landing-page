@@ -33,7 +33,10 @@ export default function Promotions() {
       <div className="flex w-full p-8 ">
         {promotions.map((promotion, index) => {
           return (
-            <div className="flex flex-col items-center group cursor-pointer flex-1 min-w-[50%] md:min-w-[25%]">
+            <div
+              key={index}
+              className="flex flex-col items-center group cursor-pointer flex-1 min-w-[50%] md:min-w-[25%]"
+            >
               <Image
                 src={promotion.img}
                 alt="ruler"

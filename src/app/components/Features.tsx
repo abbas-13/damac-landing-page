@@ -45,9 +45,10 @@ export default function Features() {
         className="flex flex-wrap justify-around sm:w-full md:w-4/5"
         style={{ position: "relative", height: "auto" }}
       >
-        {featureShow.map((feature) => {
+        {featureShow.map((feature, index) => {
           return (
             <div
+              key={index}
               className="flex flex-col sm:min-h-max items-center mx-4 relative"
               style={{ paddingBottom: "100px" }}
             >
