@@ -39,6 +39,7 @@ Open ```http://localhost:3000``` with your browser to see the result.
 Project Structure
 Here is an overview of the project structure:
 
+```
 /damac-landing-page
 ├── public                # Static files (e.g., images)
 ├── src
@@ -61,12 +62,15 @@ Here is an overview of the project structure:
 ├── README.md             # Project documentation
 ├── tailwind.config.js    # Tailwind CSS configuration
 └── tsconfig.json         # Other configuration files
+```
 
 ### Technologies Used
+
 Next.js - The React Framework
 Tailwind CSS - Utility-first CSS framework
+
 React - JavaScript library for building user interfaces
 Figma - Design tool used for creating the mockup
 
 
-### Thank you
+Thank you
