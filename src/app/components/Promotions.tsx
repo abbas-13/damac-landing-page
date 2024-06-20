@@ -1,8 +1,10 @@
 import Image from "next/image";
-import Area from "/public/area .png";
+import Area from "/public/area.png";
 import Book from "/public/book.png";
 import Handover from "/public/handover.png";
 import Plan from "/public/plan.png";
+
+// Array of promotion objects, each containing an image and text details
 
 const promotions = [
   {
@@ -27,10 +29,17 @@ const promotions = [
   },
 ];
 
+/**
+ * Promotions component renders a (horizontally scrollable section for mobile) with promotional details.
+ * Each promotion includes an image and two lines of text.
+ *
+ * @returns {JSX.Element} The promotions section of the homepage.
+ */
+
 export default function Promotions() {
   return (
     <div className="overflow-x-scroll bg-[#F4F9FF]">
-      <div className="flex w-full p-8 ">
+      <div className="flex w-full p-8">
         {promotions.map((promotion, index) => {
           return (
             <div
@@ -39,7 +48,7 @@ export default function Promotions() {
             >
               <Image
                 src={promotion.img}
-                alt="ruler"
+                alt="promotion image"
                 width={60}
                 className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-lg"
               />

@@ -4,10 +4,18 @@ import CoverImg from "public/coverimg.png";
 import Logo from "public/Logo.png";
 import MobileCoverImg from "public/coverimgmobile.png";
 
+/**
+ * Cover component renders the cover section of the homepage.
+ * It displays different images based on the screen size and includes company information.
+ *
+ * @returns {JSX.Element} The cover section of the homepage.
+ */
+
 export default function Cover() {
   return (
     <div className="relative">
       <div>
+        {/* Responsive image rendering based on screen size */}
         <div className="sm:hidden">
           <Image src={MobileCoverImg} alt="cityscape" priority />
         </div>
@@ -21,7 +29,7 @@ export default function Cover() {
         </div>
         <div className="inset-0 w-2/3 absolute bg-gradient-to-r from-[#0F375A] opacity-60"></div>
       </div>
-      <div className="my-8 flex flex-col mx-4 gap-3 absolute sm:mx-36 top-0 w-auto justify-start ">
+      <div className="my-8 flex flex-col mx-4 gap-3 absolute sm:mx-36 top-0 w-auto justify-start">
         <div className="flex mx-4 justify-between items-center">
           <Image
             src={Logo}
