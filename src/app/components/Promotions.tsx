@@ -46,14 +46,16 @@ export default function Promotions() {
               key={index}
               className="flex flex-col items-center group cursor-pointer flex-1 min-w-[50%] md:min-w-[25%]"
             >
-              <Image
-                src={promotion.img}
-                alt="promotion image"
-                width={60}
-                className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-lg"
-              />
+              <div>
+                <Image
+                  src={promotion.img}
+                  alt="promotion image"
+                  height={50}
+                  className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-lg"
+                />
+              </div>
               <div className="transition flex flex-col items-center duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-xl">
-                <p className="font-poppins mt-2 text-[#00357B]">
+                <p className="font-poppins text-sm md:text-md mt-2 text-[#00357B]">
                   {promotion.text1}
                 </p>
                 <p className="font-oswald font-medium tracking-widest text-2xl text-[#00357B]">
