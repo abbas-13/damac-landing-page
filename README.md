@@ -1,5 +1,6 @@
 # Mock Landing Page
 This project is a landing page for a Real Estate co. in Dubai based on a Figma design. The landing page is built using Next.js and styled with Tailwind CSS.
+Deployed on [Vercel](https://damac-landing-page.vercel.app/)
 
 
 ## Prerequisites
