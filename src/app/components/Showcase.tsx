@@ -16,7 +16,7 @@ export default function Showcase() {
 
   return (
     <div className="flex justify-center mb-8">
-      <div className="w-4/5 h-full flex flex-col">
+      <div className="w-full md:w-4/5 h-full flex flex-col">
         <div className="w-full flex justify-end">
           <button
             className={getButtonClasses("EXTERIORS")}

@@ -23,7 +23,7 @@ export const Lightbox = ({ src, onClose }: LightboxProps) => {
 
   const handleClose = () => {
     setIsVisible(false);
-    setTimeout(onClose, 300); // Delay the onClose callback to allow the transition to finish
+    setTimeout(onClose, 300);
   };
 
   return (
@@ -79,7 +79,7 @@ export default function Carousel() {
         <Image
           src={selectedImage}
           alt="Selected"
-          className="w-full h-[500px] rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-105"
+          className="w-full rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-105"
           onClick={() => openLightbox(selectedImage)}
         />
         <button
