@@ -10,7 +10,7 @@ import Image5 from "/public/image5.jpg";
 const images = [Image1, Image2, Image3, Image4, Image5];
 
 interface LightboxProps {
-  src: File;
+  src: any;
   onClose: () => void;
 }
 
