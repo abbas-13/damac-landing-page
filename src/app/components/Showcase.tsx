@@ -1,39 +1,29 @@
-import { useState } from "react";
-import Carousel from "./Carousel";
+import Image from "next/image";
+
+import ShowCase1 from "/public/showcase1.png";
+import ShowCase2 from "/public/showcase2.png";
+import ShowCase3 from "/public/showcase3.png";
+import ShowCase4 from "/public/showcase4.png";
+
+/**
+ * Showcase component renders a section with a grid layout to showcase different images.
+ * Each image is displayed with a hover effect that enlarges the image slightly.
+ *
+ * @returns {JSX.Element} The showcase section of the homepage.
+ */
 
 export default function Showcase() {
-  const [activeButton, setActiveButton] = useState("EXTERIORS");
-
-  const getButtonClasses = (button: string) => {
-    return button === activeButton
-      ? "bg-[#00357B] text-white cursor-pointer font-poppins font-semibold mr-4 mb-4 text-xs border-2 border-[#00357B] p-3 px-10 rounded-md tracking-wide"
-      : "bg-white text-[#00357B] cursor-pointer font-poppins font-semibold mr-4 mb-4 text-xs border-2 border-[#00357B] p-3 px-10 rounded-md tracking-wide";
-  };
-
-  const handleClick = (button: string) => {
-    setActiveButton(button);
-  };
-
   return (
-    <div className="flex justify-center mb-8">
-      <div className="w-full md:w-4/5 h-full flex flex-col">
-        <div className="w-full flex justify-end">
-          <button
-            className={getButtonClasses("EXTERIORS")}
-            onClick={() => handleClick("EXTERIORS")}
-          >
-            EXTERIORS
-          </button>
+    <div className="bg-[#F4F9FF] p-8 md:p-20">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        {[ShowCase1, ShowCase2, ShowCase3, ShowCase4].map((img, index) => (
           <div
-            className={getButtonClasses("INTERIORS")}
-            onClick={() => handleClick("INTERIORS")}
+            key={index}
+            className="overflow-hidden transition duration-300 ease-in-out transform hover:scale-105"
           >
-            INTERIORS
+            <Image src={img} alt={`Showcase ${index + 1}`} />
           </div>
-        </div>
-        <div className="w-full">
-          <Carousel />
-        </div>
+        ))}
       </div>
     </div>
   );
