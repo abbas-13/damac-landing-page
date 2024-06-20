@@ -66,11 +66,12 @@ Here is an overview of the project structure:
 
 ### Technologies Used
 
-Next.js - The React Framework
-Tailwind CSS - Utility-first CSS framework
+Next.js
+Tailwind CSS
+React
+Figma
 
-React - JavaScript library for building user interfaces
-Figma - Design tool used for creating the mockup
+
 
 
 Thank you
