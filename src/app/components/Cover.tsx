@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import CoverImg from "public/coverimg.png";
@@ -9,16 +8,17 @@ export default function Cover() {
   return (
     <div className="relative">
       <div>
-        {window.innerWidth <= 639 ? (
+        <div className="sm:hidden">
           <Image src={MobileCoverImg} alt="cityscape" priority />
-        ) : (
+        </div>
+        <div className="hidden sm:block">
           <Image
             src={CoverImg}
             className="h-[584px] object-cover"
             alt="cityscape"
             priority
           />
-        )}
+        </div>
         <div className="inset-0 w-2/3 absolute bg-gradient-to-r from-[#0F375A] opacity-60"></div>
       </div>
       <div className="my-8 flex flex-col mx-4 gap-3 absolute sm:mx-36 top-0 w-auto justify-start ">
