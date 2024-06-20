@@ -4,66 +4,53 @@ import Book from "/public/book.png";
 import Handover from "/public/handover.png";
 import Plan from "/public/plan.png";
 
+const promotions = [
+  {
+    img: Area,
+    text1: "BOOK WITH",
+    text2: "ONLY 20%",
+  },
+  {
+    img: Book,
+    text1: "PAYMENT PLAN",
+    text2: "EASY 70/30",
+  },
+  {
+    img: Handover,
+    text1: "HANDOVER ON",
+    text2: "Q2 2027",
+  },
+  {
+    img: Plan,
+    text1: "AREA STARTS FROM",
+    text2: "20 SQMT",
+  },
+];
+
 export default function Promotions() {
   return (
-    <div>
-      <div className=" flex justify-around h-auto w-full p-8 bg-[#F4F9FF]">
-        <div className="flex flex-col items-center group cursor-pointer">
-          <Image
-            src={Book}
-            alt="building"
-            width={60}
-            className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-lg"
-          />
-          <div className="transition flex flex-col items-center duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-xl">
-            <p className="font-poppins mt-2 text-[#00357B]">BOOK WITH</p>
-            <p className="font-oswald font-medium tracking-widest text-2xl text-[#00357B]">
-              ONLY 20%
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col group items-center cursor-pointer">
-          <Image
-            src={Plan}
-            alt="percentage"
-            width={60}
-            className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-lg"
-          ></Image>
-          <div className="transition flex flex-col items-center duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-xl">
-            <p className="font-poppins mt-2 text-[#00357B]">PAYMENT PLAN</p>
-            <p className="font-oswald font-medium tracking-widest text-2xl text-[#00357B]">
-              EASY 70/30
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col group items-center cursor-pointer">
-          <Image
-            src={Handover}
-            alt="keys in hand"
-            width={60}
-            className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-lg"
-          ></Image>
-          <div className="transition flex flex-col items-center duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-xl">
-            <p className="font-poppins mt-2 text-[#00357B]">HANDOVER ON</p>
-            <p className="font-oswald font-medium tracking-widest text-2xl text-[#00357B]">
-              Q2 2027
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col group items-center cursor-pointer">
-          <Image
-            src={Area}
-            alt="ruler"
-            width={60}
-            className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-lg"
-          ></Image>
-          <div className="transition flex flex-col items-center duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-xl">
-            <p className="font-poppins mt-2 text-[#00357B]">AREA STARTS FROM</p>
-            <p className="font-oswald font-medium tracking-widest text-2xl text-[#00357B]">
-              700 SQMT
-            </p>
-          </div>
-        </div>
+    <div className="overflow-x-scroll bg-[#F4F9FF]">
+      <div className="flex w-full p-8 ">
+        {promotions.map((promotion, index) => {
+          return (
+            <div className="flex flex-col items-center group cursor-pointer flex-1 min-w-[50%] md:min-w-[25%]">
+              <Image
+                src={promotion.img}
+                alt="ruler"
+                width={60}
+                className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-lg"
+              />
+              <div className="transition flex flex-col items-center duration-300 ease-in-out transform group-hover:scale-110 group-hover:drop-shadow-xl">
+                <p className="font-poppins mt-2 text-[#00357B]">
+                  {promotion.text1}
+                </p>
+                <p className="font-oswald font-medium tracking-widest text-2xl text-[#00357B]">
+                  {promotion.text2}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
